@@ -1,0 +1,168 @@
+@import '../styles/theme';
+
+.content {
+  height: 100%;
+  margin: 0 auto;
+  max-width: $layout-width;
+  padding: 0 1.5rem;
+}
+
+$header-height: 85px;
+.header {
+  background-color: $brand;
+  height: $header-height;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+
+  &--transparent {
+    background-color: rgba($brand, 0.7);
+
+    & + .contentContainer {
+      margin-top: 0;
+    }
+  }
+}
+
+.mobileIcon {
+  color: $text-light;
+  cursor: pointer;
+  z-index: 103;
+
+  &:hover {
+    color: $text-light-hover;
+  }
+}
+
+.panelOpacity {
+  background-color: $background-gray;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s;
+  z-index: 101;
+
+  &--open {
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}
+
+.panel {
+  background-color: $brand;
+  bottom: 0;
+  right: -100%;
+  max-width: 300px;
+  padding: 3rem 1.5rem 1rem;
+  position: fixed;
+  top: 0;
+  transition: right 0.2s;
+  width: 80%;
+  z-index: 102;
+
+  &--open {
+    right: 0;
+  }
+}
+
+.innerPanel {
+  height: 100%;
+}
+
+.mobileLink {
+  @extend .headerLink;
+  padding: 0.5rem 0 !important;
+  margin: 0 !important;
+}
+
+.logo {
+  flex: 1;
+}
+
+.headerLink {
+  color: $text-light;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-left: 1.6rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $text-light-hover;
+  }
+}
+
+.headerBtn {
+  margin-left: 1.6rem;
+}
+
+.phoneLink {
+  align-items: center;
+  color: $text-light;
+  display: flex;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  .icon {
+    margin-right: 0.6rem;
+  }
+
+  &:hover {
+    color: $text-light-hover;
+  }
+}
+
+.contentContainer {
+  margin-top: $header-height;
+}
+
+.footer {
+  background-color: $brand;
+  padding: 2rem 0;
+
+  &--map {
+    padding-top: 5px;
+  }
+}
+
+.footerSection {
+  @extend .content;
+  margin-top: 2rem;
+}
+
+.footerText {
+  color: $text-light;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.footerLink {
+  color: $text-light;
+  font-weight: bold;
+  margin-left: 2rem;
+  transition: color 0.2s;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:hover {
+    color: $text-light-hover;
+  }
+}
+
+.map {
+  height: 300px;
+  width: 100%;
+}

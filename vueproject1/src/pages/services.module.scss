@@ -1,0 +1,38 @@
+@import '../styles/theme';
+@import '../styles/utils';
+
+.contactText {
+  display: block;
+  margin-top: 1rem;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+.individual {
+  border-left: 2px solid $text-light;
+  margin-left: variableSize(20, 40);
+  max-width: 300px;
+  padding: 1rem 0 1rem variableSize(20, 40);
+
+  &--mobile {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.service {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.4rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.hiddenTitle {
+  display: none;
+}

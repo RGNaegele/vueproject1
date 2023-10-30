@@ -1,0 +1,58 @@
+@import '../styles/theme';
+@import '../styles/utils';
+
+$spacing: 16px;
+
+.form {
+  margin: 3rem auto 0;
+  max-width: 700px;
+
+  input,
+  textarea {
+    display: inline-block;
+    border: solid 1px $brand-light;
+    padding: 0 10px;
+    color: $text-dark;
+    background-color: $background-light;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 400;
+    transition: all 0.2s;
+    outline: none;
+    width: 100%;
+  }
+
+  label {
+    font-family: 'Work Sans', 'Helvetica', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+.formRow {
+  margin-bottom: $spacing;
+}
+
+.left {
+  margin-right: $spacing;
+}
+
+.right {
+  margin-left: $spacing;
+}
+
+.error {
+  color: red;
+  margin-left: 1.5rem;
+}
+
+.success {
+  color: $brand;
+  margin-left: 1.5rem;
+}

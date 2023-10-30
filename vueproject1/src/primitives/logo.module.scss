@@ -1,0 +1,20 @@
+@import '../styles/theme';
+
+.link {
+  text-decoration: none;
+}
+
+.logoMajor {
+  color: $text-light-hover;
+  font-size: 1.89rem;
+  letter-spacing: 2px;
+}
+
+.logoMinor {
+  color: $text-light;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 4.3px;
+  white-space: nowrap;
+}

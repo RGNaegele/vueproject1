@@ -1,0 +1,151 @@
+@import '../styles/theme';
+@import '../styles/utils';
+
+$h1-size: variableSize(45, 70);
+.heroContainer {
+  position: relative;
+}
+
+.filter {
+  background-color: rgba($brand, 0.57);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.heroTextContainer {
+  bottom: 0;
+  left: 0;
+  max-width: $layout-width;
+  margin: 0 auto;
+  position: absolute;
+  padding: 3rem 1.5rem;
+  right: 0;
+  top: 0;
+}
+
+.heroText {
+  color: $text-light-hover;
+  font-size: $h1-size;
+  font-weight: 900;
+}
+
+.header {
+  font-size: $h1-size;
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.subHeader {
+  color: $text-dark;
+  font-size: variableSize(20, 25);
+  text-align: center;
+}
+
+.bestOfOmaha {
+  height: 100px;
+  max-width: 500px;
+  position: relative;
+  width: 100%;
+}
+
+.booImage {
+  z-index: 1;
+}
+
+$height: 32px;
+.flag {
+  background-color: $brand-light;
+  bottom: 0;
+  color: $text-dark;
+  font-size: 0.9rem;
+  font-weight: bold;
+  left: 50px;
+  margin: 1rem 2rem 1rem 0;
+  padding: 0 2rem 0 calc(50px + 1rem);
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:before {
+    content: '';
+    border-bottom: $height solid $brand-light;
+    border-left: $height solid transparent;
+    border-right: $height solid transparent;
+    border-top: $height solid $brand-light;
+    height: 100%;
+    position: absolute;
+    right: -2rem;
+    width: 4rem;
+  }
+}
+
+.imgContainer {
+  width: 45%;
+
+  &--mobile {
+    margin-bottom: 3rem;
+    width: 100%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sectionHeader {
+  margin: 1rem 0 0.6rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sectionParagraph {
+  font-size: 0.9rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sectionLink {
+  color: $text-dark;
+  font-size: 0.9rem;
+  padding: 0 1.5rem;
+}
+
+.messageContainer {
+  width: 35%;
+}
+
+.message {
+  background-color: rgba($brand-light, 0.7);
+  border-radius: 4px;
+  color: $text-dark;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .bestOfOmaha {
+    height: initial;
+    margin-top: 5rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .booImage {
+    left: calc(50% - 50px);
+    position: absolute !important;
+    top: -50%;
+  }
+
+  .flag {
+    margin: 0;
+    padding: 3rem 1rem 1rem;
+    position: initial;
+
+    &:before {
+      content: none;
+    }
+  }
+}

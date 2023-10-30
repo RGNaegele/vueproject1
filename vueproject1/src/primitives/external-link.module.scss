@@ -1,0 +1,22 @@
+@import '../styles/theme';
+
+.link {
+  color: $text-dark;
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: underline;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $text-dark-hover;
+  }
+
+  &--light {
+    color: $text-light;
+
+    &:hover {
+      color: $text-light-hover;
+    }
+  }
+}

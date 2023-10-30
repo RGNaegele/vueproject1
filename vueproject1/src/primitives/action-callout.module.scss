@@ -1,0 +1,32 @@
+@import '../styles/theme';
+
+.container {
+  margin: 6rem auto 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+.callout {
+  background-color: $brand-light;
+  padding: 2.5rem;
+}
+
+.calloutText {
+  margin-right: 2.5rem;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &--collapsed {
+    margin: 0 0 1rem;
+
+    * {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import './theme';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-dark;
+  margin-bottom: 0;
+}
+
+p {
+  color: $text-dark;
+}

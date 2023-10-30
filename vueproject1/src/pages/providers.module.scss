@@ -1,0 +1,45 @@
+@import '../styles/theme';
+@import '../styles/utils';
+
+.rowContainer {
+  margin: 0 auto;
+  max-width: 80%;
+
+  &--mobile {
+    .img {
+      margin-bottom: 2rem;
+      width: 70%;
+    }
+
+    .description {
+      margin: 0 !important;
+    }
+  }
+}
+
+.img {
+  flex: 1;
+  max-width: 280px;
+}
+
+.description {
+  flex: 2;
+
+  &:first-of-type {
+    margin-right: variableSize(40, 80);
+  }
+
+  &:last-of-type {
+    margin-left: variableSize(40, 80);
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .rowContainer {
+    max-width: 100%;
+  }
+}
